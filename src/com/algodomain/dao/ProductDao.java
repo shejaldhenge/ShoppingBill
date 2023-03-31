@@ -167,7 +167,7 @@ public class ProductDao
 	  		Class.forName("com.mysql.cj.jdbc.Driver");
 	  		con = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
 	  		   
-	  		   String qry="select * from products where Product_ID =1";
+	  		   String qry="select * from products";
 	  		  s= con.createStatement();
 	  		  
 	  		   rs =s.executeQuery(qry);
@@ -179,6 +179,8 @@ public class ProductDao
 	  			  System.out.println(rs.getString("Product_Type"));
 	  			  System.out.println(rs.getString("product_Category"));
 	  			  System.out.println(rs.getInt("Product_Price"));
+	  			  
+	  			  System.out.println("------------------------");
 	  		  }
 	  		  
 	  	    } 
